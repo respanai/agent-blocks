@@ -67,7 +67,7 @@ export interface LevelAnswer {
 export const LEVEL_CONFIGS: Record<string, LevelConfig> = {
   'level-1': {
     id: 'level-1',
-    title: 'Tutorial 1 - Calendar Agent Workflow',
+    title: 'Agent Blocks - Calendar Agent Workflow',
     description: 'Learn to build an AI agent that schedules meetings and manages calendar conflicts',
     difficulty: 'easy',
     tags: ['basics', 'tutorial', 'calendar', 'scheduling'],

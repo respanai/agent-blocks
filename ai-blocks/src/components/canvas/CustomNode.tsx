@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { Handle, Position, NodeProps } from 'react-flow-renderer';
+import { Handle, Position, NodeProps } from '@xyflow/react';
 import { getBlock } from '@/engine/blocks/registry';
 
 interface CustomNodeData {
@@ -93,4 +93,4 @@ export const nodeTypes = {
   googleCalendarSchedule: CustomNode,
   userOutput: CustomNode,
   // Add any other block types here
-}; 
+};

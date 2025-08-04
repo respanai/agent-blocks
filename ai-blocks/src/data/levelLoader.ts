@@ -163,10 +163,15 @@ export function saveLevelProgress(levelId: string, score: number, stars: number,
   };
   
   // Save to localStorage for now
-  const key = `ai-blocks-progress-${levelId}`;
-  localStorage.setItem(key, JSON.stringify(progress));
-  
-  console.log(`Saved progress for ${levelId}:`, progress);
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const key = `ai-blocks-progress-${levelId}`;
+      localStorage.setItem(key, JSON.stringify(progress));
+      console.log(`Saved progress for ${levelId}:`, progress);
+    }
+  } catch (error) {
+    console.warn(`Failed to save progress for ${levelId}:`, error);
+  }
 }
 
 /**
@@ -174,13 +179,16 @@ export function saveLevelProgress(levelId: string, score: number, stars: number,
  */
 export function loadLevelProgress(levelId: string): { score: number; stars: number; completed: boolean } | null {
   try {
-    const key = `ai-blocks-progress-${levelId}`;
-    const saved = localStorage.getItem(key);
-    if (!saved) return null;
-    
-    return JSON.parse(saved);
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const key = `ai-blocks-progress-${levelId}`;
+      const saved = localStorage.getItem(key);
+      if (!saved) return null;
+      
+      return JSON.parse(saved);
+    }
+    return null;
   } catch (error) {
     console.warn(`Failed to load progress for ${levelId}:`, error);
     return null;
   }
-} 
+}

@@ -6,7 +6,8 @@
 
 "use client";
 import { useCallback, useRef } from "react";
-import ReactFlow, {
+import {
+  ReactFlow,
   Controls,
   Background,
   Connection,
@@ -14,7 +15,7 @@ import ReactFlow, {
   useReactFlow,
   NodeMouseHandler,
   EdgeMouseHandler,
-} from "react-flow-renderer";
+} from "@xyflow/react";
 import { useGraphStore } from "@/store/graphStore";
 import { useUIStore } from "@/store/uiStore";
 import { useRunStore } from "@/store/runStore";

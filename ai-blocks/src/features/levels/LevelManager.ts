@@ -310,7 +310,9 @@ export class LevelManager {
    */
   private saveProgress(): void {
     try {
-      localStorage.setItem('ai-blocks-progress', JSON.stringify(this.progress));
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('ai-blocks-progress', JSON.stringify(this.progress));
+      }
     } catch (error) {
       console.warn('Failed to save progress:', error);
     }
@@ -321,9 +323,11 @@ export class LevelManager {
    */
   private loadProgress(): void {
     try {
-      const saved = localStorage.getItem('ai-blocks-progress');
-      if (saved) {
-        this.progress = { ...this.progress, ...JSON.parse(saved) };
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const saved = localStorage.getItem('ai-blocks-progress');
+        if (saved) {
+          this.progress = { ...this.progress, ...JSON.parse(saved) };
+        }
       }
     } catch (error) {
       console.warn('Failed to load progress:', error);
@@ -341,6 +345,15 @@ export class LevelManager {
       totalStars: 0
     };
     this.saveProgress();
+    
+    // Also clear from localStorage directly
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.removeItem('ai-blocks-progress');
+      }
+    } catch (error) {
+      console.warn('Failed to clear progress from localStorage:', error);
+    }
   }
 
   /**
@@ -352,4 +365,4 @@ export class LevelManager {
 }
 
 // Export singleton instance
-export const levelManager = LevelManager.getInstance(); 
+export const levelManager = LevelManager.getInstance();
