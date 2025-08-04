@@ -8,6 +8,7 @@
 import { useRouter } from "next/navigation";
 import { APP_CONFIG } from "@/config";
 import { levelManager } from "@/features/levels";
+import TopNavBar from "@/components/navigation/TopNavBar";
 
 export default function HomePage() {
   const router = useRouter();
@@ -35,7 +36,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-200 text-slate-900">
-      <div className="max-w-6xl mx-auto px-6 py-40">
+      <TopNavBar />
+      <div className="max-w-6xl mx-auto px-6 py-24">
         {/* Hero Section */}
         <div className="text-center mb-24 mt-8">
           <h1 className="text-6xl font-bold text-slate-700 mb-6 tracking-tight">
@@ -59,6 +61,8 @@ export default function HomePage() {
             </span>
           </div>
         </div>
+
+
 
         {/* Workflow Builder Section */}
         <div className="bg-gray-200 rounded-xl p-8 mb-20">
@@ -171,6 +175,52 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Games Section */}
+        <div className="bg-gray-200 rounded-xl p-8 mb-20">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-semibold text-slate-700 mb-4">AI Games</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              Experience AI capabilities through interactive games and challenges.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div 
+              onClick={() => router.push('/games/20-questions')}
+              className="bg-white rounded-lg p-6 cursor-pointer transform hover:scale-[1.02] transition-all duration-200 shadow-sm hover:shadow-md border border-gray-200"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤔</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-700 mb-2">20 Questions</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Think of something and let AI guess it by asking strategic yes/no questions. 
+                  Experience different AI models' reasoning approaches.
+                </p>
+                <div className="flex justify-center space-x-2 text-xs">
+                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full">OpenAI</span>
+                  <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Anthropic</span>
+                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full">Google</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-100 border-2 border-dashed border-gray-400 rounded-lg p-6 opacity-60">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-500 mb-2">More Games</h3>
+                <p className="text-slate-500 text-sm mb-4">
+                  Additional AI-powered games and challenges coming soon.
+                </p>
+                <span className="text-slate-500 text-sm font-semibold">Coming Soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Production Deployment */}
         <div className="bg-gray-200 p-8 py-12">
           <h2 className="text-3xl font-semibold text-slate-700 mb-6 text-center">Ready for Production?</h2>
@@ -256,4 +306,4 @@ export default function HomePage() {
       </div>
     </div>
   );
-} 
+}
