@@ -22,10 +22,13 @@ importers:
         version: 12.8.2(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       ai:
         specifier: ^3.3.26
-        version: 3.4.33(react@19.1.0)(sswr@2.2.0(svelte@5.37.3))(svelte@5.37.3)(vue@3.5.18(typescript@5.8.3))(zod@3.25.76)
+        version: 3.4.33(openai@5.11.0(zod@3.25.76))(react@19.1.0)(sswr@2.2.0(svelte@5.37.3))(svelte@5.37.3)(vue@3.5.18(typescript@5.8.3))(zod@3.25.76)
       next:
         specifier: 15.3.5
         version: 15.3.5(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      openai:
+        specifier: ^5.11.0
+        version: 5.11.0(zod@3.25.76)
       react:
         specifier: ^19.0.0
         version: 19.1.0
@@ -1798,6 +1801,18 @@ packages:
     resolution: {integrity: sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==}
     engines: {node: '>= 0.4'}
 
+  openai@5.11.0:
+    resolution: {integrity: sha512-+AuTc5pVjlnTuA9zvn8rA/k+1RluPIx9AD4eDcnutv6JNwHHZxIhkFy+tmMKCvmMFDQzfA/r1ujvPWB19DQkYg==}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.23.8
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
+
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
@@ -2967,7 +2982,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ai@3.4.33(react@19.1.0)(sswr@2.2.0(svelte@5.37.3))(svelte@5.37.3)(vue@3.5.18(typescript@5.8.3))(zod@3.25.76):
+  ai@3.4.33(openai@5.11.0(zod@3.25.76))(react@19.1.0)(sswr@2.2.0(svelte@5.37.3))(svelte@5.37.3)(vue@3.5.18(typescript@5.8.3))(zod@3.25.76):
     dependencies:
       '@ai-sdk/provider': 0.0.26
       '@ai-sdk/provider-utils': 1.0.22(zod@3.25.76)
@@ -2983,6 +2998,7 @@ snapshots:
       secure-json-parse: 2.7.0
       zod-to-json-schema: 3.24.6(zod@3.25.76)
     optionalDependencies:
+      openai: 5.11.0(zod@3.25.76)
       react: 19.1.0
       sswr: 2.2.0(svelte@5.37.3)
       svelte: 5.37.3
@@ -4080,6 +4096,10 @@ snapshots:
       call-bound: 1.0.4
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
+
+  openai@5.11.0(zod@3.25.76):
+    optionalDependencies:
+      zod: 3.25.76
 
   optionator@0.9.4:
     dependencies:
