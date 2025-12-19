@@ -53,17 +53,6 @@ export function StoryCard({
           </p>
         </motion.div>
 
-        {supportingText && <motion.div initial={{
-        opacity: 0
-      }} whileInView={{
-        opacity: 1
-      }} transition={{
-        duration: 0.6,
-        delay: 0.5
-      }} className="mb-12 px-6 py-3 rounded-full bg-white/10 border border-white/10 inline-block">
-            <span className="text-lg text-gray-300">{supportingText}</span>
-          </motion.div>}
-
         {caption && <motion.p initial={{
         opacity: 0
       }} whileInView={{

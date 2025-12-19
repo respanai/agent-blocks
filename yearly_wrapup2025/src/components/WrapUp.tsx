@@ -22,8 +22,6 @@ const fallbackData = {
   first_log_date: 'Jan 14, 2024',
   prompts_created: '142',
   prompt_used_logs: '89K',
-  logs_ingested_count: '2.4M',
-  traces_created_count: '156K',
   success_rate: '99.9',
   avg_latency_ms: '245',
   team_members_added: '12',
@@ -33,6 +31,7 @@ const fallbackData = {
 
 export function WrapUp() {
   return <main className="w-full h-screen bg-[#0A0A0F] text-white snap-container no-scrollbar relative">
+      <StickyHeader />
       {/* 1. Intro */}
       <IntroSection organizationName={fallbackData.organization_name} />
 
@@ -48,7 +47,7 @@ export function WrapUp() {
       {/* 3. Power Moments (Split) */}
       <SplitMetrics headline="Power moments" left={{
       value: fallbackData.max_tokens_single_request,
-      label: 'Biggest single run',
+      label: 'Biggest single run (tokens)',
       gradient: 'from-orange-400 to-red-500'
     }} right={{
       value: fallbackData.requests_per_active_day,
@@ -57,7 +56,7 @@ export function WrapUp() {
     }} caption="When you built, you built big." />
 
       {/* 4. Models (Story) */}
-      <StoryCard headline="Your model DNA" heroText={fallbackData.top_model} heroLabel="Top model" supportingText={`Models used: ${fallbackData.model_used_count}`} caption="Your default choice powered most of your work." gradient="from-purple-400 to-blue-500" />
+      <StoryCard headline="You used 8 models" heroText={fallbackData.top_model} heroLabel="Top model" caption="Your default choice powered most of your work." gradient="from-purple-400 to-blue-500" />
 
       {/* 5. Activity Cadence (Grid) */}
       <GridMetrics headline="Activity cadence" items={[{
@@ -89,18 +88,8 @@ export function WrapUp() {
       value: fallbackData.prompt_used_logs,
       label: 'Prompt-linked logs',
       gradient: 'from-fuchsia-400 to-pink-500'
-    }} caption="From ideas to runs—tracked." />
+    }} caption="From ideas to runs." />
 
-      {/* 8. Observability Footprint (Split) */}
-      <SplitMetrics headline="Observability footprint" left={{
-      value: fallbackData.logs_ingested_count,
-      label: 'Logs ingested',
-      gradient: 'from-cyan-400 to-blue-500'
-    }} right={{
-      value: fallbackData.traces_created_count,
-      label: 'Traces created',
-      gradient: 'from-blue-400 to-indigo-500'
-    }} caption="Signals you captured to debug and improve." />
 
       {/* 9. Reliability Snapshot (Hero + Chip) */}
       <HeroWithChips headline="How it performed" heroValue={fallbackData.success_rate} heroSuffix="%" heroLabel="Success rate" chips={[{
@@ -118,7 +107,7 @@ export function WrapUp() {
       value: fallbackData.new_users_added,
       label: 'New users added',
       gradient: 'from-cyan-400 to-teal-500'
-    }} caption="More builders joined the journey." />
+    }} caption="More people joined you journey." />
 
       {/* 11. Outro */}
       <OutroSection />
