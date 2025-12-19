@@ -41,9 +41,9 @@ export function GridMetrics({
       }} transition={{
         duration: 0.6,
         delay: index * 0.15
-      }} className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm min-h-[200px] md:min-h-[300px]">
-            {item.icon && <div className={`mb-6 p-3 rounded-full bg-white/5 ${item.accentColor || 'text-white'}`}>
-                {item.icon}
+      }} className="flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm min-h-[200px] md:min-h-[300px]">
+          {item.icon && <div className={`mb-6 p-3 rounded-full bg-white/5 ${item.accentColor || 'text-white'}`}>
+              {item.icon}
               </div>}
             <CountUpNumber value={item.value} className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center ${item.accentColor || 'text-white'}`} />
             <span className="text-sm md:text-base font-medium text-gray-400 uppercase tracking-wide text-center">

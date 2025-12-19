@@ -23,7 +23,7 @@ export function IntroSection({ organizationName = 'Keywords AI' }: IntroSectionP
         ease: 'easeOut'
       }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-md mb-8">
           <Sparkles className="w-4 h-4 text-yellow-400" />
-          <span className="text-sm font-medium text-white">2025 Wrapped</span>
+          <span className="text-sm font-medium text-white">2025</span>
         </motion.div>
 
         <motion.h1 initial={{
@@ -35,7 +35,7 @@ export function IntroSection({ organizationName = 'Keywords AI' }: IntroSectionP
       }} transition={{
         duration: 0.8,
         delay: 0.2
-      }} className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-6">
+      }} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-6">
           {organizationName}
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">

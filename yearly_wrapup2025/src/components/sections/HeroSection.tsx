@@ -14,12 +14,12 @@ export function HeroSection() {
         duration: 1.5,
         ease: [0.16, 1, 0.3, 1]
       }}>
-          <h2 className="text-xl md:text-2xl font-semibold text-apple-gray mb-6 tracking-wide uppercase">
+          <h2 className="text-lg md:text-2xl font-semibold text-apple-gray mb-6 tracking-wide uppercase">
             2025 Wrap Up
           </h2>
         </motion.div>
 
-        <motion.h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-apple-text tracking-tighter leading-tight mb-8" initial={{
+        <motion.h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-apple-text tracking-tighter leading-tight mb-8" initial={{
         opacity: 0,
         y: 60
       }} animate={{

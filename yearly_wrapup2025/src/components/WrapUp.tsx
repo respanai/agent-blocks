@@ -33,8 +33,6 @@ const fallbackData = {
 
 export function WrapUp() {
   return <main className="w-full h-screen bg-[#0A0A0F] text-white snap-container no-scrollbar relative">
-      <StickyHeader />
-
       {/* 1. Intro */}
       <IntroSection organizationName={fallbackData.organization_name} />
 
