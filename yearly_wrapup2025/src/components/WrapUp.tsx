@@ -107,7 +107,7 @@ export function WrapUp() {
       value: fallbackData.new_users_added,
       label: 'New users added',
       gradient: 'from-cyan-400 to-teal-500'
-    }} caption="More people joined you journey." />
+    }} caption="More people joined your journey." />
 
       {/* 11. Outro */}
       <OutroSection />
