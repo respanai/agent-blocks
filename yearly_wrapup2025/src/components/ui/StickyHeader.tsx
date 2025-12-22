@@ -5,7 +5,7 @@ export function StickyHeader() {
   const [copied, setCopied] = useState(false);
   const handleShare = () => {
     // In a real app, this would be dynamic based on the user
-    const url = 'https://www.magicpatterns.com/wrapped/54vys';
+    const url = window.location.href;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
