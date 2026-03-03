@@ -1,87 +1,36 @@
-# Keywordsai Samples
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This repository contains a collection of AI and automation projects demonstrating various technologies and use cases. Each project showcases different aspects of AI development, from visual workflow builders to trading bots and scheduling systems.
+## Getting Started
 
-## 📁 Projects Overview
+First, run the development server:
 
-### 🎮 [ai-blocks](./ai-blocks/)
-**Visual Workflow Builder for AI Agents**
-- **Tech Stack**: Next.js 15, React 19, TypeScript, Tailwind CSS, React Flow
-- **Description**: Interactive visual programming platform for designing AI agent workflows
-- **Features**: Drag-and-drop interface, tutorial levels, sandbox mode, real-time execution
-- **Status**: Active Development
-
-### 💰 [crypto_bot4.5](./crypto_bot4.5/)
-**Cryptocurrency Trading Bot**
-- **Tech Stack**: Python, Backend API, Frontend Dashboard
-- **Description**: Automated cryptocurrency trading system with monitoring dashboard
-- **Features**: Trading algorithms, risk management, real-time monitoring
-- **Status**: Version 4.5
-
-### 📅 [google_scheduler6.5](./google_scheduler6.5/)
-**AI-Powered Google Calendar Scheduler**
-- **Tech Stack**: JavaScript, Google Calendar API, Jupyter Notebooks
-- **Description**: Intelligent scheduling system that integrates with Google Calendar
-- **Features**: 
-  - Calendar conflict detection
-  - Automated scheduling
-  - AI-powered time suggestions
-  - Google OAuth integration
-- **Components**:
-  - `ai_scheduler_workflow.ipynb` - Main scheduling logic
-  - `google_auth_setup.ipynb` - Authentication setup
-  - `openai_js_tracing/` - Node.js implementation with OpenAI integration
-- **Status**: Version 6.5
-
-### 🃏 [poker_fight5.5](./poker_fight5.5/)
-**AI Poker Tournament System**
-- **Tech Stack**: Python, HTML/CSS/JS, CSV logging
-- **Description**: Multi-agent poker tournament with AI players and analytics
-- **Features**:
-  - Texas Hold'em poker engine
-  - AI player strategies
-  - Tournament management
-  - Performance analytics
-  - Web-based visualization
-- **Components**:
-  - `core/` - Game logic and models
-  - `engine/` - Poker game engine
-  - `services/` - Logging and AI integration
-  - `texas-holdem-master/` - Web interface
-- **Status**: Version 5.5
-
-### 📊 [get_start01-03](./get_start01-03/)
-**Getting Started Samples**
-- **Tech Stack**: Python
-- **Description**: Basic examples and tutorials for AI development
-- **Features**: Logging, proxy configuration, tracing examples
-- **Status**: Tutorial/Examples
-
-### 📝 [Logging04](./Logging04/)
-**Logging API Examples**
-- **Tech Stack**: Python
-- **Description**: API logging implementations and examples
-- **Features**: Embedded and full logging solutions
-- **Status**: Examples
-
-### 🎨 [mcp_blender](./mcp_blender/)
-**Blender Integration**
-- **Tech Stack**: Python (Blender Add-on)
-- **Description**: Blender add-on for AI-powered 3D modeling workflows
-- **Status**: Development
-
-## 🚀 Quick Start
-
-### Prerequisites
-- **Node.js** 18+ (for ai-blocks, google_scheduler)
-- **Python** 3.8+ (for crypto_bot, poker_fight, logging examples)
-- **Git** for version control
-
-### Running Individual Projects
-
-#### AI Blocks (Visual Workflow Builder)
 ```bash
-cd ai-blocks
-npm install
 npm run dev
-# Open http://localhost:3000
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
