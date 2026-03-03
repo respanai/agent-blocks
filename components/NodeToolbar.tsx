@@ -121,8 +121,6 @@ export function NodeToolbar() {
     ? userActions.filter((a) => a.toLowerCase().includes(query))
     : userActions;
 
-  const totalPresetMatches = filteredGroups.reduce((n, g) => n + g.actions.length, 0);
-  const noMatch = query && totalPresetMatches === 0 && filteredUser.length === 0;
   const exactExists =
     allPresetActions.includes(query) ||
     userActions.some((a) => a.toLowerCase() === query);
